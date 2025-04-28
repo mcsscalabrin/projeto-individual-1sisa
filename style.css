@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Boldonse&family=Cal+Sans&family=Oi&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+body{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background-color: #F4F1DE;
+    color: #264653;
+    flex-direction: column;
+}
+
+.titulo{
+    font-family: "Boldonse", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    color: #264653;
+    font-size: 20px;
+    text-align: center;
+    padding: 2rem;
+    position: relative;
+}
+
+.beach-tennis-titulo{
+    color: #FF6B4A;
+    font-family: "Boldonse", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 56px;
+    line-height: 80px;
+}
+
+.beach-tennis{
+    color: #FF6B4A;
+    font-family: "Boldonse", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 38px;
+
+}
+
+.origem-titulo{
+    font-family: "Boldonse", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.card {
+    max-width: 1100px;
+    width: 90%;
+    margin: 25px auto;
+    padding: 35px;
+    background-color: #264653;
+    border-radius: 12px;
+    outline: 1px solid rgba(233, 196, 106, 0.2);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    color: #FFFFFF;
+    line-height: 1.7;
+    font-family: 'Open Sans', sans-serif;
+}
+

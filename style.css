@@ -58,3 +58,20 @@ body{
     font-family: 'Open Sans', sans-serif;
 }
 
+.lista{
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.item-lista{
+    margin-bottom: 15px;
+    padding-left: 20px;
+    position: relative;
+    font-size: 20px;
+    line-height: 1.3    ;
+}
+
+.texto-lista{
+    color: #2A9D8F;
+    font-weight: bold;
+}

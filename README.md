@@ -1,5 +1,3 @@
 # projeto-individual-1sisa
-repositório do projeto individual sobre Beach Tennis
-
-<h1>CONHEÇA O MUNDO DO
-<br>BEACH TENNIS</h1>
+<h1>CONHEÇA O MUNDO DO BEACH TENNIS</h1>
+<p>repositório do meu projeto individual sobre <b>Beach Tennis</b></p>

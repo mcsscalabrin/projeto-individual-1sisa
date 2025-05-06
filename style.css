@@ -248,32 +248,32 @@ button:disabled {
     margin-bottom: 20px;
 }
 
-.quiz-link {
+.maps-link {
     display: flex;
     justify-content: center;
     align-items: center;
     width: fit-content;
     margin: 20px auto;
-    padding: 10px 20px;
+    padding: 100px 100px;
     background-color: var(--cor-primaria);
     color: white;
     text-decoration: none;
     border-radius: 12px;
     font-family: "Boldonse", system-ui;
     font-weight: 400;
-    font-size: 18px;
+    font-size: 25px;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease;
 }
 
-.quiz-link:hover {
+.maps-link:hover {
     background-color: #ff8066;
     transform: translateY(-3px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
 }
 
-.quiz-link:active {
+.maps-link:active {
     transform: translateY(1px);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
@@ -443,4 +443,73 @@ body {
 
 .titulo {
     margin-top: 20px;
+}
+
+.centro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.formulario {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    padding: 5px 0;
+}
+
+input {
+    margin-bottom: 10px;
+    border: 2px solid var(--cor-primaria);
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.tamanho-login {
+    height: 40%;
+    width: 35%;
+}
+
+.margem-card {
+    margin-top: 20vh;
+    margin-bottom: 0;
+}
+
+.botao {
+    cursor: pointer;
+    font-family: "Boldonse", system-ui;
+    border: 0;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 20px;
+    color: var(--branco-novo);
+    background-color: var(--cor-primaria);
+    width: 160px;
+    height: 60px;
+    align-self: center;
+    margin-top: 20px;
+}
+
+.tamanho-cadastro {
+    height: 72%;
+    width: 35%;
+}
+
+.margem-card-cadastro {
+    margin-top: 6vh;
+    margin-bottom: 0;
+}
+
+#imgRaquete {
+    height: 35vh;
 }

@@ -74,6 +74,7 @@ body {
 
 .paragrafo {
     margin-left: 30px;
+    font-size: 17px;
 }
 
 .card {
@@ -98,12 +99,11 @@ body {
 }
 
 .item-lista {
-    margin-bottom: 15px;
-    padding-left: 20px;
     position: relative;
     font-size: 20px;
     font-weight: normal;
-    line-height: 23px;
+    line-height: 32px;
+    margin-left: 30px;
 }
 
 .texto-lista {
@@ -512,4 +512,36 @@ input {
 
 #imgRaquete {
     height: 35vh;
+}
+
+.ranking {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 18vh;
+    padding: 5vh;
+    line-height: 1px;
+    justify-content: center;
+}
+
+.texto-centro {
+    text-align: center;
+}
+
+.tamanho-jogadores {
+    height: 70vh;
+}
+
+.jogadores-nome {
+    font-family: "Boldonse", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 30px;
+}
+
+.ranking-itf {
+    color: var(--success);
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
 }

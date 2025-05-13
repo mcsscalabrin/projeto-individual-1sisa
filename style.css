@@ -252,36 +252,6 @@ button:disabled {
     margin-bottom: 50px;
 }
 
-.maps-link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: fit-content;
-    margin: 20px auto;
-    padding: 100px 100px;
-    background-color: var(--cor-primaria);
-    color: white;
-    text-decoration: none;
-    border-radius: 12px;
-    font-family: "Boldonse", system-ui;
-    font-weight: 400;
-    font-size: 25px;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    transition: all 0.3s ease;
-}
-
-.maps-link:hover {
-    background-color: #ff8066;
-    transform: translateY(-3px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
-}
-
-.maps-link:active {
-    transform: translateY(1px);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-}
-
 footer {
     background-color: var(--cor-secundaria);
     color: white;
@@ -295,7 +265,7 @@ footer {
 }
 
 .rodape-conteudo {
-    max-width: 1100px;
+    max-width: 1300px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -432,7 +402,7 @@ body {
 }
 
 .pagina-quiz .quiz-titulo {
-    margin-top: 5vh;
+    margin-top: 30vh;
 }
 
 .pagina-quiz #btnIniciarQuiz {
@@ -564,6 +534,10 @@ input {
     margin-top: 25vh;
 }
 
+.margem-quiz {
+    margin-top: 11vh;
+}
+
 .botoes-acesso-card {
     display: flex;
     flex-direction: column;
@@ -631,4 +605,48 @@ input {
 
 .overflow-x {
     overflow-x: hidden;
+}
+
+.secao-usuario {
+    margin-top: -2px;
+}
+
+.navbar-conteudo-landing {
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.redirecionar-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 55%;
+    margin: 20px auto;
+    padding: 100px 100px;
+    background-color: var(--cor-primaria);
+    color: white;
+    text-decoration: none;
+    border-radius: 12px;
+    font-family: "Boldonse", system-ui;
+    font-weight: 400;
+    font-size: 25px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+
+.redirecionar-link:hover {
+    background-color: #ff8066;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+.redirecionar-link:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }

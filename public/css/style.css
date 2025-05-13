@@ -435,6 +435,14 @@ body {
     padding: 5px 0;
 }
 
+select {
+    margin-bottom: 10px;
+    border: 2px solid var(--cor-primaria);
+    padding: 10px;
+    text-align: center;
+    border-radius: 12px;
+}
+
 input {
     margin-bottom: 10px;
     border: 2px solid var(--cor-primaria);
@@ -651,3 +659,4 @@ input {
     transform: translateY(1px);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
+

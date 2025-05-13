@@ -19,8 +19,13 @@
 
 html, body {
     height: 100%;
+    width: 100%;
     margin: 0;
     padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -33,7 +38,6 @@ body {
     color: var(--cor-secundaria);
     flex-direction: column;
     font-family: 'Open Sans', sans-serif;
-    min-height: 100vh;
 }
 
 .titulo {
@@ -80,7 +84,7 @@ body {
 .card {
     max-width: 1100px;
     width: 90%;
-    margin: 25px auto;
+    margin: 5vh auto;
     padding: 35px;
     background-color: var(--cor-secundaria);
     border-radius: 12px;
@@ -167,7 +171,7 @@ button:disabled {
     width: 90%;
 }
 
-.padding-8 {
+.padding {
     padding: 8px;
 }
 
@@ -215,7 +219,7 @@ button:disabled {
     flex-direction: column;
     align-items: center;
     width: 100%;
-    margin-top: 40px;
+    margin-top: 0px;
     padding-top: 10px;
 }
 
@@ -245,7 +249,7 @@ button:disabled {
     color: var(--cor-secundaria);
     font-size: 28px;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
 }
 
 .maps-link {
@@ -290,7 +294,7 @@ footer {
     border-radius: 15px 15px 0 0;
 }
 
-.footer-content {
+.rodape-conteudo {
     max-width: 1100px;
     margin: 0 auto;
     display: flex;
@@ -299,17 +303,17 @@ footer {
     padding: 0 20px;
 }
 
-.footer-text {
+.rodape-texto {
     font-size: 16px;
     margin: 5px 0;
 }
 
-.footer-highlight {
+.rodape-highlight {
     color: var(--cor-primaria);
     font-weight: bold;
 }
 
-.footer-info {
+.rodape-info {
     text-align: left;
 }
 
@@ -342,8 +346,8 @@ footer {
     border-radius: 0 0 15px 15px;
 }
 
-.navbar-content {
-    max-width: 1100px;
+.navbar-conteudo {
+    max-width: 1300px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -351,7 +355,7 @@ footer {
     padding: 0 20px;
 }
 
-.navbar-brand {
+.navbar-logo {
     font-family: "Boldonse", system-ui;
     font-weight: 400;
     font-size: 22px;
@@ -361,7 +365,7 @@ footer {
 
 .navbar-links {
     display: flex;
-    gap: 20px;
+    gap: 33px;
 }
 
 .navbar-links a {
@@ -374,7 +378,7 @@ footer {
     color: var(--cor-primaria);
 }
 
-.auth-buttons {
+.botoes-acesso {
     display: flex;
     gap: 10px;
 }
@@ -412,18 +416,12 @@ footer {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-.quiz-page footer {
-    display: none;
-}
-
 body {
-    padding-top: 70px;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
 }
 
-.quiz-page {
+.pagina-quiz {
     min-height: auto;
     height: auto;
     padding-bottom: 100px;
@@ -433,11 +431,11 @@ body {
     align-items: center;
 }
 
-.quiz-page .quiz-titulo {
-    margin-top: 10vh;
+.pagina-quiz .quiz-titulo {
+    margin-top: 5vh;
 }
 
-.quiz-page #btnIniciarQuiz {
+.pagina-quiz #btnIniciarQuiz {
     margin: 30px auto;
 }
 
@@ -480,11 +478,6 @@ input {
     width: 35%;
 }
 
-.margem-card {
-    margin-top: 20vh;
-    margin-bottom: 0;
-}
-
 .botao {
     cursor: pointer;
     font-family: "Boldonse", system-ui;
@@ -501,18 +494,27 @@ input {
 }
 
 .tamanho-cadastro {
-    height: 72%;
+    height: 68%;
     width: 35%;
 }
 
 .margem-card-cadastro {
-    margin-top: 6vh;
-    margin-bottom: 0;
+    margin-top: 10vh;
+    margin-bottom: 0vh;
+
 }
 
+.margem-card-login {
+    margin-top: 28vh;
+    margin-bottom: 0vh;
+
+}
+
+/* Por enquanto a imagem da raquete não está sendo usada
 #imgRaquete {
     height: 35vh;
 }
+*/
 
 .ranking {
     display: flex;
@@ -544,4 +546,16 @@ input {
     font-family: 'Open Sans', sans-serif;
     font-weight: bold;
     font-size: 20px;
+}
+
+.margem-body-cadastro {
+    margin-top: 7vh;
+}
+
+.overflow-y{
+    overflow-y: hidden;
+}
+
+.margem-titulo {
+    margin-top: 14vh;
 }

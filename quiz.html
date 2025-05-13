@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-BR">
 
     <head>
         <meta charset="UTF-8">
@@ -8,16 +8,13 @@
         <link rel="stylesheet" href="style.css">
     </head>
 
-    <body onload="onloadEsconder()" class="quiz-page">
+    <body onload="onloadEsconder()" class="pagina-quiz overflow-y">
         <nav class="navbar">
-            <div class="navbar-content">
-                <a href="index.html" class="navbar-brand">BEACH TENNIS</a>
+            <div class="navbar-conteudo">
+                <a href="index.html" class="navbar-logo">BEACH TENNIS</a>
                 <div class="navbar-links">
-                    <a href="index.html">Início</a>
-                    <a href="https://www.google.com/maps/search/arenas+de+beach+tennis+perto+de+mim"
-                        target="_blank">Quadras Próximas</a>
                 </div>
-                <div class="auth-buttons">
+                <div class="botoes-acesso">
                     <a href="login.html" class="btn-login">Login</a>
                     <a href="cadastro.html" class="btn-cadastro">Cadastrar</a>
                 </div>
@@ -32,11 +29,11 @@
             <button id="btnIniciarQuiz" onclick="iniciarQuiz()">INICIAR QUIZ</button>
 
             <div id="pontuacao" class="flex-colunar border-primary">
-                <div id="pontuacaoDuranteJogo" class="flex-colunar padding-8">
+                <div id="pontuacaoDuranteJogo" class="flex-colunar padding">
                     <span>Quantidade de acertos: <span id="spanCertas"></span></span>
                     <span>Quantidade de erros: <span id="spanErradas"></span></span>
                 </div>
-                <div id="pontuacaoFinalJogo" class="flex-colunar padding-8">
+                <div id="pontuacaoFinalJogo" class="flex-colunar padding">
                     <span id="pontuacaoFinal">Pontuação Final:
                         <span id="spanPontuacaoFinal">***</span>
                     </span>
@@ -46,20 +43,20 @@
 
             <div id="jogo" class="flex-colunar border-secondary">
 
-                <div id="infoQuestao" class="padding-8">
+                <div id="infoQuestao" class="padding">
                     <span>Questão atual: <span id="spanNumeroDaQuestaoAtual"></span> de <span id="qtdQuestoes"></span>
                         questões.</span>
                 </div>
 
-                <div id="perguntaDaQuestaoAtual" class="padding-8">
+                <div id="perguntaDaQuestaoAtual" class="padding">
                     <span id="spanQuestaoExibida" class="text-bold"></span>
                 </div>
 
-                <div id="infoAlternativas" class="padding-8">
+                <div id="infoAlternativas" class="padding">
                     <span><em>Escolha uma opção dentre as abaixo:</em></span>
                 </div>
 
-                <div id="opcoes" class="flex-colunar padding-8">
+                <div id="opcoes" class="flex-colunar padding">
                     <span>
                         <input type="radio" id="primeiraOpcao" name="option" class="radio" value="alternativaA" />
                         <label for="primeiraOpcao" class="option" id="labelOpcaoUm"></label>
@@ -78,7 +75,7 @@
                     </span>
                 </div>
 
-                <div id="botoes" class="flex-colunar padding-8">
+                <div id="botoes" class="flex-colunar padding">
                     <button onclick="submeter()" id="btnSubmeter">Submeter resposta</button>
                     <button onclick="avancar()" id="btnProx" disabled>Avançar para próxima questão</button>
                     <button onclick="tentarNovamente()" id="btnTentarNovamente" disabled>Tentar novamente</button>

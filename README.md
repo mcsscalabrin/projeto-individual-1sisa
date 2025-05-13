@@ -61,7 +61,6 @@
 <p>Para executar o projeto localmente, siga as etapas abaixo:</p>
 <ol>
     <li>
-        <strong>Clone o repositório:</strong> git clone
         <strong>Clone o repositório:</strong> git clone URL_ADDRESS.com/MatheusChiosini/projeto-individual-1sisa.git
     </li>
     <li>
@@ -76,7 +75,7 @@
     <li>
         <strong>Acesse o site:</strong> Abra o navegador e acesse
         <strong>Inicie o servidor:</strong> node app.js
-        URL_ADDRESS:3000
+        A aplicação irá rodar na porta 3333.
     </li>
 </ol>
 <h2>Autor</h2>

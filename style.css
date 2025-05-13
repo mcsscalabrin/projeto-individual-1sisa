@@ -559,3 +559,76 @@ input {
 .margem-titulo {
     margin-top: 14vh;
 }
+
+.margem-titulo-landing {
+    margin-top: 25vh;
+}
+
+.botoes-acesso-card {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-left: 5vh;
+    width: 590px;
+    text-align: center;
+}
+
+.btn-login-card, .btn-cadastro-card {
+    font-family: "Boldonse", system-ui;
+    font-weight: 400;
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 20px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+.btn-login-card {
+    background-color: transparent;
+    color: white;
+    border: 2px solid var(--cor-primaria);
+}
+
+.btn-login-card:hover {
+    background-color: rgba(255, 107, 74, 0.2);
+}
+
+.btn-cadastro-card {
+    background-color: var(--cor-primaria);
+    color: white;
+    border: none;
+}
+
+.btn-cadastro-card:hover {
+    background-color: #ff8066;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.margem-body-landing {
+    margin-top: -8vh;
+}
+
+.imgCappe {
+    position: absolute;
+    transform: scale(50%);
+    margin-top: -150px;
+    margin-bottom: -1600px;
+    margin-left: -260px;
+    z-index: -100;
+}
+
+.imgNinny {
+    position: absolute;
+    transform: scale(55%);
+    margin-top: -155px;
+    margin-bottom: -1600px;
+    margin-left: 660px;
+    z-index: -100;
+}
+
+.overflow-x {
+    overflow-x: hidden;
+}

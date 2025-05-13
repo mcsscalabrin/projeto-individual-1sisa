@@ -31,9 +31,3 @@ CREATE TABLE registro_quiz (
     FOREIGN KEY (fkUsuario) REFERENCES usuario(id)
 );
 
-CREATE TABLE beach_tenista (
-    idAtleta INT PRIMARY KEY AUTO_INCREMENT,
-    genero VARCHAR(45),
-    pontuacao VARCHAR(45),
-    posicao VARCHAR(45)
-);

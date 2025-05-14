@@ -11,9 +11,9 @@
     <body onload="onloadEsconder()" class="pagina-quiz overflow-y">
         <nav class="navbar">
             <div class="navbar-conteudo">
-                <a href="index.html" class="navbar-logo">BEACH TENNIS</a>
+                <a href="landing-page.html" class="navbar-logo">BEACH TENNIS</a>
                 <div class="secao-usuario">
-                    <a href="">
+                    <a href="usuario.html">
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
                             width="40" height="40" viewBox="0 0 256 256" xml:space="preserve">
                             <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;"
@@ -370,5 +370,64 @@
         // btnConcluir.disabled = true
         btnTentarNovamente.disabled = false
 
+        // Chamar a função para enviar os dados do quiz para o banco de dados
+        enviarDadosQuiz(certas, erradas, pontuacaoFinal);
+    }
+
+    function enviarDadosQuiz(acertos, erros, pontuacaoFinal) {
+        // Capturar o ID do usuário da sessão (assumindo que está armazenado)
+        const idUsuario = sessionStorage.getItem('ID_USUARIO');
+
+        // Se não houver usuário logado, alertar e redirecionar para login
+        if (idUsuario == null) {
+            alert("Você precisa estar logado para salvar seus resultados!");
+            window.location = "login.html";
+            return;
+        }
+
+        // Criar objeto com os dados do quiz
+        const dadosQuiz = {
+            idUsuario: idUsuario,
+            acertos: acertos,
+            erros: erros,
+            pontuacaoFinal: pontuacaoFinal
+        };
+
+        // Enviar dados para o servidor
+        fetch("/usuarios/registrarQuiz", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(dadosQuiz)
+        })
+            .then(resposta => {
+                if (resposta.ok) {
+                    console.log("Resultados do quiz registrados com sucesso!");
+                } else {
+                    console.error("Erro ao registrar resultados do quiz");
+                }
+            })
+            .catch(erro => {
+                console.error("Erro na requisição:", erro);
+            });
+    }
+
+    function salvarResultado(acertos, erros) {
+        fetch("/quiz/registrar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                idUsuarioServer: sessionStorage.ID_USUARIO,
+                acertosServer: acertos,
+                errosServer: erros
+            })
+        }).then(function (resposta) {
+            console.log("Resultado do quiz registrado com sucesso!");
+        }).catch(function (erro) {
+            console.log(erro);
+        });
     }
 </script>

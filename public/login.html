@@ -11,7 +11,7 @@
     <body class="overflow-y">
         <nav class="navbar">
             <div class="navbar-conteudo">
-                <a href="landing-page.html" class="navbar-logo">BEACH TENNIS</a>
+                <a href="index.html" class="navbar-logo">BEACH TENNIS</a>
                 <div class="navbar-links">
                 </div>
                 <div class="botoes-acesso">
@@ -33,12 +33,30 @@
                 </div>
                 <button class="botao" onclick="entrar()">Entrar</button>
             </div>
+            <div class="alerta_erro">
+                <div class="card_erro" id="cardErro" style="display: none;">
+                    <span id="mensagem_erro"></span>
+                </div>
+            </div>
+            <div id="div_aguardar" class="loading-div" style="display: none;">
+                <img src="./assets/circle-loading.gif" id="loading-gif">
+            </div>
         </div>
     </body>
 
 </html>
 
 <script>
+    function aguardar() {
+        var divAguardar = document.getElementById("div_aguardar");
+        divAguardar.style.display = "flex";
+    }
+
+    function finalizarAguardar() {
+        var divAguardar = document.getElementById("div_aguardar");
+        divAguardar.style.display = "none";
+    }
+
     function entrar() {
         aguardar();
 
@@ -47,7 +65,7 @@
 
         if (emailVar == "" || senhaVar == "") {
             cardErro.style.display = "block"
-            mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+            mensagem_erro.innerHTML = "Preencha todos os campos para prosseguir!";
             finalizarAguardar();
             return false;
         }
@@ -79,26 +97,27 @@
                     sessionStorage.EMAIL_USUARIO = json.email;
                     sessionStorage.NOME_USUARIO = json.nome;
                     sessionStorage.ID_USUARIO = json.id;
-                    sessionStorage.AQUARIOS = JSON.stringify(json.aquarios)
+                    sessionStorage.CATEGORIA_USUARIO = json.categoria;
 
                     setTimeout(function () {
-                        window.location = "./dashboard/cards.html";
+                        window.location = "landing-page.html";
                     }, 1000); // apenas para exibir o loading
-
                 });
 
             } else {
-
                 console.log("Houve um erro ao tentar realizar o login!");
+                cardErro.style.display = "block";
+                mensagem_erro.innerHTML = "Email ou senha incorretos!";
 
                 resposta.text().then(texto => {
                     console.error(texto);
-                    finalizarAguardar(texto);
+                    finalizarAguardar();
                 });
             }
 
         }).catch(function (erro) {
             console.log(erro);
+            finalizarAguardar();
         })
 
         return false;
@@ -107,5 +126,4 @@
     function sumirMensagem() {
         cardErro.style.display = "none"
     }
-
 </script>

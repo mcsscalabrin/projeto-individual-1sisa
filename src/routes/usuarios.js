@@ -12,4 +12,9 @@ router.post("/autenticar", function (req, res) {
     usuarioController.autenticar(req, res);
 });
 
+// Rota para registrar os resultados do quiz
+router.post("/registrarQuiz", function (req, res) {
+    usuarioController.registrarQuiz(req, res);
+});
+
 module.exports = router;

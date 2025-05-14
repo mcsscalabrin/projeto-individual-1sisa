@@ -22,7 +22,7 @@ CREATE TABLE usuario (
 );
 
 CREATE TABLE registro_quiz (
-    idTentativa INT,
+    idTentativa INT auto_increment,
     fkUsuario INT,
     dtHora DATETIME DEFAULT current_timestamp,
     qtdAcertos INT,
@@ -31,3 +31,5 @@ CREATE TABLE registro_quiz (
     FOREIGN KEY (fkUsuario) REFERENCES usuario(id)
 );
 
+SELECT * FROM usuario;
+SELECT * FROM registro_quiz;

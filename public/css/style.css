@@ -745,12 +745,6 @@ input {
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
-/*
-.dashboard-area {
-    flex-grow: 1;
-    padding: 20px;
-}
-*/
 
 #loading-gif {
     display: flex;

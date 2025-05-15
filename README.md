@@ -70,12 +70,10 @@
         <strong>Configure o banco de dados:</strong> Crie um banco de dados MySQL e execute os scripts de criação de tabelas disponíveis em /sql.
     </li>
     <li>
-        <strong>Inicie o servidor:</strong> node app.js
+        <strong>Inicie o servidor:</strong> npm start
     </li>
     <li>
-        <strong>Acesse o site:</strong> Abra o navegador e acesse
-        <strong>Inicie o servidor:</strong> node app.js
-        A aplicação irá rodar na porta 3333.
+        <strong>Acesse a aplicação pelo navegador: </strong> A aplicação irá rodar na porta 3333 (http://localhost:3333).
     </li>
 </ol>
 <h2>Autor</h2>

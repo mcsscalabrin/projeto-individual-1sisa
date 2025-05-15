@@ -101,7 +101,7 @@ projeto-individual-1sisa/
 <p>Para executar o projeto localmente, siga as etapas abaixo:</p>
 <ol>
     <li>
-        <strong>Clone o repositório:</strong> git clone URL_ADDRESS.com/MatheusChiosini/projeto-individual-1sisa.git
+        <strong>Clone o repositório:</strong> git clone https://github.com/mcsscalabrin/projeto-individual-1sisa.git
     </li>
     <li>
         <strong>Instale as dependências:</strong> npm install

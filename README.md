@@ -57,6 +57,46 @@
     </li>
 </ul>
 
+<h2>Estrutura do Projeto</h2>
+<pre>
+projeto-individual-1sisa/
+├── public/
+│   ├── assets/
+│   │   └── imagens/
+│   │       └── jogadores/
+│   ├── css/
+│   │   └── style.css
+│   ├── js/
+│   ├── dashboard/
+│   ├── index.html
+│   ├── login.html
+│   ├── cadastro.html
+│   ├── landing-page.html
+│   ├── quiz.html
+│   └── usuario.html
+├── src/
+│   ├── controllers/
+│   │   ├── beachTenistaController.js
+│   │   └── ...
+│   ├── database/
+│   │   ├── config.js
+│   │   └── script-tableas.sql
+│   ├── models/
+│   │   ├── beachTenistaModel.js
+│   │   └── ...
+│   └── routes/
+│       ├── beachTenistas.js
+│       └── ...
+├── sql/
+│   └── ranking_itf.sql
+├── .env
+├── .env.dev
+├── .gitignore
+├── app.js
+├── package.json
+└── README.md
+</pre>
+
 <h2>Como Executar o Projeto</h2>
 <p>Para executar o projeto localmente, siga as etapas abaixo:</p>
 <ol>

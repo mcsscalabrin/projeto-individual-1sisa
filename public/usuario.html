@@ -82,27 +82,8 @@
             </div>
         </div>
 
-        <script>
-            document.addEventListener('DOMContentLoaded', function () {
-                // Verificar se o usuário está logado
-                if (sessionStorage.ID_USUARIO == undefined) {
-                    window.location = "login.html";
-                    return;
-                }
-
-                // Dados do usuário do sessionStorage
-                spanNomeUsuario.innerHTML = sessionStorage.NOME_USUARIO || "Nome não disponível";
-                spanEmailUsuario.innerHTML = sessionStorage.EMAIL_USUARIO || "Email não disponível";
-                spanCategoriaUsuario.innerHTML = sessionStorage.CATEGORIA_USUARIO || "Categoria não disponível";
-            });
-
-            function sair() {
-                // Limpar dados da sessão
-                sessionStorage.clear();
-                // Redirecionar para a página de login
-                window.location = "landing-page.html";
-            }
-        </script>
     </body>
 
 </html>
+
+<script src="js/usuario.js"></script>

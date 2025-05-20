@@ -8,17 +8,41 @@ function finalizarAguardar() {
     divAguardar.style.display = "none";
 }
 
+/*    função de validação */
+/*
+function validarCadastro() {
+    var nome = ipt_nome.value;
+    var email = ipt_email.value;
+    var senha = ipt_senha.value;
+    var cnpj = ipt_cnpj.value;
+    var validado = true;
+
+    if (nome == "" || email == "" || senha == "" || cnpj == "") {
+        alert("Por favor, preencha todos os campos obrigatórios.");
+        validado = false;
+    } else if (email.indexOf('@') == -1 || email.indexOf('.') == -1 || email.indexOf('@') > email.lastIndexOf('.') || email.indexOf('@') == 0 || email.lastIndexOf('.') == email.length - 1) {
+        alert("Este endereço de email não é válido.");
+        validado = false;
+    } else if (senha.length < 6) {
+        alert("A senha deve ter pelo menos 6 caracteres.");
+        validado = false;
+    }
+    if (validado) {
+        alert("Cadastro realizado com sucesso!");
+        window.location.href = "login.html";
+    }
+}
+*/
+
 function cadastrar() {
     aguardar();
 
-    //Recupere o valor da nova input pelo nome do id
     var nomeVar = nome_input.value;
     var categoriaVar = categoria_input.value;
     var emailVar = email_input.value;
     var senhaVar = senha_input.value;
     var confirmacaoSenhaVar = confirmacao_senha_input.value;
 
-    // Verificando se há algum campo em branco
     if (
         nomeVar == "" ||
         categoriaVar == "" ||

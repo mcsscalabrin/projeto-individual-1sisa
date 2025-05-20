@@ -13,5 +13,5 @@ document.addEventListener('DOMContentLoaded', function () {
 
 function sair() {
     sessionStorage.clear();
-    window.location = "landing-page.html";
+    window.location = "login.html";
 }

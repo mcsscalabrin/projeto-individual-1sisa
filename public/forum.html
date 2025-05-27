@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Fórum de Vídeos - Beach Tennis</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+
+    <body>
+        <nav class="navbar">
+            <div class="navbar-conteudo">
+                <a href="landing-page.html" class="navbar-logo">BEACH TENNIS</a>
+                <div class="navbar-links">
+                    <a href="landing-page.html#inicio">INÍCIO</a>
+                    <a href="landing-page.html#origem">ORIGEM</a>
+                    <a href="landing-page.html#regras">REGRAS</a>
+                    <a href="landing-page.html#ranking-masculino">RANKING MASC.</a>
+                    <a href="landing-page.html#ranking-feminino">RANKING FEM.</a>
+                    <a href="landing-page.html#quiz">QUIZ</a>
+                    <a href="landing-page.html#quadras-proximas">QUADRAS PRÓXIMAS</a>
+                    <a href="forum.html">FÓRUM</a>
+                </div>
+                <div class="secao-usuario">
+                    <a href="usuario.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+                            width="40" height="40" viewBox="0 0 256 256" xml:space="preserve">
+                            <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;"
+                                transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)">
+                                <path
+                                    d="M 45 0 C 20.147 0 0 20.147 0 45 c 0 24.853 20.147 45 45 45 s 45 -20.147 45 -45 C 90 20.147 69.853 0 45 0 z M 45 22.007 c 8.899 0 16.14 7.241 16.14 16.14 c 0 8.9 -7.241 16.14 -16.14 16.14 c -8.9 0 -16.14 -7.24 -16.14 -16.14 C 28.86 29.248 36.1 22.007 45 22.007 z M 45 83.843 c -11.135 0 -21.123 -4.885 -27.957 -12.623 c 3.177 -5.75 8.144 -10.476 14.05 -13.341 c 2.009 -0.974 4.354 -0.958 6.435 0.041 c 2.343 1.126 4.857 1.696 7.473 1.696 c 2.615 0 5.13 -0.571 7.473 -1.696 c 2.083 -1 4.428 -1.015 6.435 -0.041 c 5.906 2.864 10.872 7.591 14.049 13.341 C 66.123 78.957 56.135 83.843 45 83.843 z"
+                                    style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: #FF6B4A; fill-rule: nonzero; opacity: 1;"
+                                    transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+                            </g>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </nav>
+
+        <div class="titulo laranja margem-titulo">
+            <h2>FÓRUM DE VÍDEOS DE
+                <br><span class="beach-tennis-titulo">BEACH TENNIS</span>
+            </h2>
+        </div>
+
+        <div class="card centro" id="postar-video-section">
+            <h2 class="origem-titulo">COMPARTILHE SUA JOGADA</h2>
+            <div class="formulario-video">
+                <div class="campo">
+                    <span>Título:</span>
+                    <input id="titulo_input" type="text" placeholder="Título do vídeo" maxlength="45">
+                </div>
+                <div class="campo">
+                    <span>Descrição (opcional):</span>
+                    <textarea id="descricao_input" placeholder="Descreva seu vídeo" maxlength="200"></textarea>
+                </div>
+                <div class="campo">
+                    <span>URL do Vídeo (YouTube, Vimeo, etc.):</span>
+                    <input id="video_url_input" type="text" placeholder="https://www.youtube.com/watch?v=...">
+                </div>
+                <button class="botao botao-full-width" onclick="postarVideo()">Postar Vídeo</button>
+            </div>
+            <div class="alerta_erro">
+                <div class="card_erro" id="cardErro" style="display: none;">
+                    <span id="mensagem_erro"></span>
+                </div>
+            </div>
+            <div id="div_aguardar" class="loading-div" style="display: none;">
+                <img src="./assets/circle-loading.gif" id="loading-gif">
+            </div>
+        </div>
+
+        <div class="card centro">
+            <h2 class="origem-titulo">VÍDEOS COMPARTILHADOS</h2>
+            <div id="videos-container" class="videos-container">
+                <div class="sem-videos" id="sem-videos">
+                    <p>Nenhum vídeo compartilhado ainda. Seja o primeiro a compartilhar!</p>
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>
+
+<script src="js/forum.js"></script>

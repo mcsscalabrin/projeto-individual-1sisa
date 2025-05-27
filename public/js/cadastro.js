@@ -8,31 +8,29 @@ function finalizarAguardar() {
     divAguardar.style.display = "none";
 }
 
-/*    função de validação */
-/*
-function validarCadastro() {
-    var nome = ipt_nome.value;
-    var email = ipt_email.value;
-    var senha = ipt_senha.value;
-    var cnpj = ipt_cnpj.value;
+// Função de validação implementada
+function validarCadastro(nome, categoria, email, senha) {
     var validado = true;
 
-    if (nome == "" || email == "" || senha == "" || cnpj == "") {
-        alert("Por favor, preencha todos os campos obrigatórios.");
+    if (nome == "" || email == "" || senha == "" || categoria == "") {
+        cardErro.style.display = "block";
+        mensagem_erro.innerHTML = "Por favor, preencha todos os campos obrigatórios.";
         validado = false;
-    } else if (email.indexOf('@') == -1 || email.indexOf('.') == -1 || email.indexOf('@') > email.lastIndexOf('.') || email.indexOf('@') == 0 || email.lastIndexOf('.') == email.length - 1) {
-        alert("Este endereço de email não é válido.");
+    } else if (email.indexOf('@') == -1 || email.indexOf('.') == -1 ||
+                email.indexOf('@') > email.lastIndexOf('.') ||
+                email.indexOf('@') == 0 ||
+                email.lastIndexOf('.') == email.length - 1) {
+        cardErro.style.display = "block";
+        mensagem_erro.innerHTML = "Este endereço de email não é válido.";
         validado = false;
     } else if (senha.length < 6) {
-        alert("A senha deve ter pelo menos 6 caracteres.");
+        cardErro.style.display = "block";
+        mensagem_erro.innerHTML = "A senha deve ter pelo menos 6 caracteres.";
         validado = false;
     }
-    if (validado) {
-        alert("Cadastro realizado com sucesso!");
-        window.location.href = "login.html";
-    }
+
+    return validado;
 }
-*/
 
 function cadastrar() {
     aguardar();
@@ -43,29 +41,18 @@ function cadastrar() {
     var senhaVar = senha_input.value;
     var confirmacaoSenhaVar = confirmacao_senha_input.value;
 
-    if (
-        nomeVar == "" ||
-        categoriaVar == "" ||
-        emailVar == "" ||
-        senhaVar == "" ||
-        confirmacaoSenhaVar == ""
-    ) {
-        cardErro.style.display = "block";
-        mensagem_erro.innerHTML =
-            "Preencha todos os campos para prosseguir!";
-
+    if (!validarCadastro(nomeVar, categoriaVar, emailVar, senhaVar)) {
         finalizarAguardar();
         return false;
-    } else {
-        setInterval(sumirMensagem, 5000);
     }
 
-    // Verificando se as senhas batem
     if (senhaVar != confirmacaoSenhaVar) {
         cardErro.style.display = "block";
         mensagem_erro.innerHTML = "As senhas inseridas não coincidem!";
         finalizarAguardar();
         return false;
+    } else {
+        setInterval(sumirMensagem, 5000);
     }
 
     fetch("/usuarios/cadastrar", {

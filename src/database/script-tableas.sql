@@ -43,7 +43,7 @@ CREATE TABLE video (
     FOREIGN KEY (fkUsuario)
     REFERENCES usuario (id)
 );
-    
+
 SELECT * FROM usuario;
 SELECT * FROM registro_quiz;
 
@@ -79,3 +79,5 @@ INSERT INTO beach_tenista (nome, genero, pais, pontuacao, posicao) VALUES
 	('Veronica Casadei', 'Feminino', 'Itália', 2651, 9),
 	('Elizaveta Kudinova', 'Feminino', 'Rússia', 2568, 10);
 */
+-- Modificação na tabela video para armazenar URL em vez de BLOB
+ALTER TABLE video MODIFY COLUMN video VARCHAR(255) NOT NULL;

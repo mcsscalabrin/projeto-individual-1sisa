@@ -31,6 +31,19 @@ CREATE TABLE registro_quiz (
     FOREIGN KEY (fkUsuario) REFERENCES usuario(id)
 );
 
+CREATE TABLE video (
+  idVideo INT NOT NULL,
+  titulo VARCHAR(45) NOT NULL,
+  descricao VARCHAR(200) NULL,
+  video LONGBLOB NOT NULL,
+  fkUsuario INT NOT NULL,
+  dtHora DATETIME NOT NULL DEFAULT current_timestamp,
+  PRIMARY KEY (idVideo, fkUsuario),
+  CONSTRAINT fkVideoUsuario
+    FOREIGN KEY (fkUsuario)
+    REFERENCES usuario (id)
+);
+    
 SELECT * FROM usuario;
 SELECT * FROM registro_quiz;
 
@@ -40,7 +53,6 @@ SELECT * FROM registro_quiz as registro
 
 /*
 INSERT INTO beach_tenista (nome, genero, pais, pontuacao, posicao) VALUES
-*/
 	/* Ranking Masculino */
 /*
     ('André Baran', 'Masculino', 'Brasil', 5800, 1),

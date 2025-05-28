@@ -227,3 +227,22 @@
         </div>
     </div>
 </footer>
+<script>
+    $(document).ready(function () {
+        $('.banner').slick({
+            infinite: true,
+            dots: true,
+            slidesToShow: 1,
+            slidesToScroll: 1
+        });
+    });
+
+    $('.banner').slick({
+        infinite: true,
+        dots: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        variableWidth: true,
+        centerMode: true,
+    });
+</script>

@@ -13,7 +13,6 @@ function publicar(req, res) {
     } else if (videoUrl == undefined) {
         res.status(400).send("A URL do vídeo é obrigatória!");
     } else {
-        // Salvar informações no banco de dados
         videoModel.publicar(titulo, descricao, videoUrl, idUsuario)
             .then(function (resultado) {
                 res.status(201).json(resultado);

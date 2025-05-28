@@ -75,14 +75,42 @@
                 </div>
             </div>
 
-            <!-- Área para dashboard (65% restante) -->
             <div class="dashboard-area">
-                <!-- Espaço reservado para a dashboard -->
+                <div class="dashboard-header">
+                    <h2 class="dashboard-titulo">Minhas Estatísticas do Quiz</h2>
+                </div>
+                <div class="dashboard-content">
+                    <div class="kpi-flex">
+                        <div class="kpi-card-alt">
+                            <div class="kpi-info">
+                                <h4>Quizzes Realizados</h4>
+                                <p id="kpiTotalQuizzes">0</p>
+                            </div>
+                        </div>
+                        <div class="kpi-card-alt">
+                            <div class="kpi-info">
+                                <h4>Média de Acertos</h4>
+                                <p id="kpiMediaAcertos">0%</p>
+                            </div>
+                        </div>
+                        <div class="kpi-card-alt">
+                            <div class="kpi-info">
+                                <h4>Melhor Pontuação</h4>
+                                <p id="kpiMelhorPontuacao">0</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chart-section">
+                        <div class="chart-wrapper">
+                            <canvas id="quizChart"></canvas>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
 
     </body>
 
 </html>
 
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="js/usuario.js"></script>

@@ -31,8 +31,27 @@ function registrarQuiz(idUsuario, acertos, erros, dataHora) {
     return database.executar(instrucao);
 }
 
+/*
+function obterRankingMelhoresPontuacoes() {
+    console.log("ACESSEI O QUIZ MODEL - obterRankingMelhoresPontuacoes()");
+    var instrucao = `
+        SELECT u.id AS idUsuario, u.nome AS nomeUsuario,
+            MAX(rq.qtdAcertos) as melhorPontuacao,
+            MIN(rq.dtHora) as dataMelhorPontuacao -- critério de desempate
+            FROM registro_quiz rq
+            JOIN usuario u
+            ON rq.fkUsuario = u.id
+                GROUP BY u.id, u.nome
+                ORDER BY melhorPontuacao DESC, dataMelhorPontuacao ASC;
+    `;
+    console.log("Executando a instrução SQL: \n" + instrucao);
+    return database.executar(instrucao);
+}
+*/
+
 module.exports = {
     listar,
     registrar,
-    registrarQuiz
+    registrarQuiz,
+    //obterRankingMelhoresPontuacoes
 };

@@ -493,7 +493,7 @@ input {
 
 }
 
-/* Por enquanto a imagem da raquete não está sendo usada
+/* Por enquanto a img da raquete nao está sendo usada
 #imgRaquete {
     height: 35vh;
 }
@@ -839,4 +839,79 @@ input {
 .botao-full-width {
     width: 100%;
     max-width: none;
+}
+
+/* dashboard */
+
+.dashboard-area {
+    width: 79%;
+    padding: 30px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.dashboard-header {
+    margin-bottom: 30px;
+}
+
+.dashboard-titulo {
+    font-family: "Boldonse", system-ui;
+    color: var(--cor-secundaria);
+    font-size: 26px;
+    text-align: left;
+    margin-top: 10vh;
+}
+
+.dashboard-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.kpi-flex {
+    display: flex;
+    gap: 25px;
+}
+
+.kpi-card-alt {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.07);
+    display: flex;
+    width: 100%;
+}
+
+.kpi-info h4 {
+    margin: 0 0 8px 0;
+    font-size: 1.7em;
+    color: #555;
+    font-weight: 600;
+}
+
+.kpi-info p {
+    font-size: 35px;
+    font-weight: 700;
+    color: var(--cor-primaria);
+    margin: 0;
+}
+
+.chart-section {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.chart-wrapper {
+    width: 100%;
+    max-width: 750px;
+    margin: 0 auto;
+    height: 350px;
+}
+
+#quizChart {
+    max-height: 100%;
 }

@@ -3,6 +3,7 @@
 -- ter este arquivo aqui não significa que a tabela em seu BD estará como abaixo!
 CREATE DATABASE db_beachtennis;
 USE db_beachtennis;
+
 CREATE TABLE beach_tenista (
     idAtleta INT PRIMARY KEY AUTO_INCREMENT,
     nome VARCHAR(100),
@@ -79,5 +80,6 @@ INSERT INTO beach_tenista (nome, genero, pais, pontuacao, posicao) VALUES
 	('Veronica Casadei', 'Feminino', 'Itália', 2651, 9),
 	('Elizaveta Kudinova', 'Feminino', 'Rússia', 2568, 10);
 */
--- Modificação na tabela video para armazenar URL em vez de BLOB
+SELECT * FROM usuario;
+
 ALTER TABLE video MODIFY COLUMN video VARCHAR(255) NOT NULL;

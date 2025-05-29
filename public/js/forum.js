@@ -119,7 +119,6 @@ function carregarVideos() {
             "Content-Type": "application/json"
         }
     }).then(function (resposta) {
-        // Verificar se o status é 200 (OK) antes de tentar processar como JSON
         if (resposta.status == 200) {
             resposta.json().then(function (resposta) {
                 console.log("Dados recebidos: ", JSON.stringify(resposta));
@@ -169,7 +168,7 @@ function carregarVideos() {
                     videosContainer.appendChild(semVideos);
                 }
             });
-        } else if (resposta.status === 204) {
+        } else if (resposta.status == 204) {
             var videosContainer = document.getElementById("videos-container");
             var semVideos = document.getElementById("sem-videos");
 

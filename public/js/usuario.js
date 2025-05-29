@@ -51,6 +51,7 @@ function carregarDadosDashboard() {
             document.getElementById('kpiMelhorPontuacao').textContent = '0';
             renderizarGraficoQuiz([]);
         });
+}
 
     // Buscar dados do ranking
     /*
@@ -78,7 +79,6 @@ function carregarDadosDashboard() {
             document.getElementById('kpiPosicaoGeral').textContent = 'Erro';
         });
         */
-}
 
 function atualizarKPIs(quizData) {
     const totalQuizzes = quizData.length;

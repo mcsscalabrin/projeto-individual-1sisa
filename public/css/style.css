@@ -115,6 +115,58 @@ body {
     font-weight: bold;
 }
 
+.carrossel-conteudo {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    gap: 30px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    /*min-height: 650px;*/
+    min-height: fit-content;
+    width: 100%;
+    align-items: flex-start;
+}
+
+.fundo-jogador {
+    padding: 20px 60px 15px 60px;
+    border-radius: 15px;
+    background-image: linear-gradient(to bottom, #ff6b4a, #e5563d, #cc4031, #b22925, #990c19);
+}
+
+.align-centro {
+    align-self: center;
+    text-align: start;
+}
+
+.tamanho-titulos-ranking {
+    width: 100%;
+    align-self: center;
+
+}
+
+.nome-jogador {
+    margin-top: 10px;
+    text-align: center;
+    font-family: "Boldonse", system-ui;
+    font-weight: 400;
+    font-size: 1.3em;
+}
+
+.pontuacao {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin-top: -10px;
+}
+
+.pontuacao-jogador {
+    text-align: center;
+    font-family: "Boldonse", system-ui;
+    font-weight: 400;
+    font-size: 1.0em;
+}
+
 button {
     font-family: "Boldonse", system-ui;
     font-weight: 400;

@@ -8,7 +8,7 @@ function finalizarAguardar() {
     divAguardar.style.display = "none";
 }
 
-// Função de validação implementada
+// validação do cadastro
 function validarCadastro(nome, categoria, email, senha) {
     var validado = true;
 
@@ -74,7 +74,7 @@ function cadastrar() {
             mensagem_erro.innerHTML = "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
 
             setTimeout(() => {
-                window.location = "landing-page.html";
+                window.location = "login.html";
             }, "2000");
 
             limparFormulario();

@@ -108,7 +108,7 @@ function renderizarGraficoQuiz(quizData) {
         ctx.font = "12px 'Open Sans', sans-serif";
         ctx.fillStyle = "#666";
         ctx.textAlign = "center";
-        ctx.fillText("Nenhum dado de quiz disponível para exibir o gráfico.", ctx.canvas.width / 2, 10);
+        ctx.fillText("Nenhum dado de quiz disponível para exibir o gráfico.", ctx.canvas.width / 2, 10, 900);
         return;
     }
 

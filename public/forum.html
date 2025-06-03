@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="css/style.css">
     </head>
 
-    <body>
+    <body onload="carregarVideos()">
         <nav class="navbar">
             <div class="navbar-conteudo">
                 <a href="landing-page.html" class="navbar-logo">BEACH TENNIS</a>
@@ -72,7 +72,7 @@
             </div>
         </div>
 
-        <div class="card centro">
+        <div class="card centro margin-bottom-jogadas">
             <h2 class="origem-titulo">VÍDEOS COMPARTILHADOS</h2>
             <div id="videos-container" class="videos-container">
                 <div class="sem-videos" id="sem-videos">
@@ -80,8 +80,10 @@
                 </div>
             </div>
         </div>
+        <br>
     </body>
 
 </html>
 
 <script src="js/forum.js"></script>
+<script src="../js/sessao.js"></script>

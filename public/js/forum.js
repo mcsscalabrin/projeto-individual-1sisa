@@ -1,12 +1,3 @@
-document.addEventListener('DOMContentLoaded', function () {
-    if (sessionStorage.ID_USUARIO == undefined) {
-        window.location = "login.html";
-        return;
-    }
-
-    carregarVideos();
-});
-
 function aguardar() {
     var divAguardar = document.getElementById("div_aguardar");
     divAguardar.style.display = "flex";

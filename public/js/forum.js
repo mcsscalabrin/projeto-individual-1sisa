@@ -21,7 +21,7 @@ function sumirMensagem() {
 function extrairIdYoutube(url) {
     if (!url) return null;
 
-    // Padrões de URL do YouTube
+    // padrões de URL do YouTube
     const regexes = [
         /(?:youtube\.com\/watch\?v=|youtu\.be\/)([^&\?]+)/,
         /youtube\.com\/embed\/([^&\?]+)/
@@ -38,7 +38,7 @@ function extrairIdYoutube(url) {
 }
 
 function validarUrlVideo(url) {
-    // Verifica se é uma URL válida
+    // verificando se é uma URL válida
     try {
         new URL(url);
     } catch (e) {
@@ -55,7 +55,7 @@ function postarVideo() {
     var descricaoVar = descricao_input.value;
     var videoUrlVar = video_url_input.value;
 
-    // Validações
+    // validações
     if (tituloVar == "") {
         mostrarErro("Preencha o título do vídeo!");
         finalizarAguardar();
@@ -115,13 +115,14 @@ function carregarVideos() {
                 console.log("Dados recebidos: ", JSON.stringify(resposta));
 
                 var videosContainer = document.getElementById("videos-container");
-                var semVideos = document.getElementById("sem-videos");
-
                 videosContainer.innerHTML = "";
 
-                if (resposta.length > 0) {
-                    semVideos.style.display = "none";
+                var semVideos = document.createElement("div");
+                semVideos.id = "sem-videos";
+                semVideos.className = "sem-videos";
+                semVideos.innerHTML = "<p>Nenhum vídeo compartilhado ainda. Seja o primeiro a compartilhar!</p>";
 
+                if (resposta.length > 0) {
                     for (let i = 0; i < resposta.length; i++) {
                         var video = resposta[i];
 
@@ -155,17 +156,18 @@ function carregarVideos() {
                         videosContainer.appendChild(videoCard);
                     }
                 } else {
-                    semVideos.style.display = "block";
                     videosContainer.appendChild(semVideos);
                 }
             });
         } else if (resposta.status == 204) {
             var videosContainer = document.getElementById("videos-container");
-            var semVideos = document.getElementById("sem-videos");
-
             videosContainer.innerHTML = "";
 
-            semVideos.style.display = "block";
+            var semVideos = document.createElement("div");
+            semVideos.id = "sem-videos";
+            semVideos.className = "sem-videos";
+            semVideos.innerHTML = "<p>Nenhum vídeo compartilhado ainda. Seja o primeiro a compartilhar!</p>";
+
             videosContainer.appendChild(semVideos);
         } else {
             console.error('Erro na API:', resposta.status);

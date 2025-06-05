@@ -74,4 +74,8 @@ CREATE TABLE video (
  ('Veronica Casadei', 'Feminino', 'Itália', 2651, 9),
  ('Elizaveta Kudinova', 'Feminino', 'Rússia', 2568, 10);
  */
-/*SELECT * FROM usuario;*/
+SELECT * FROM usuario;
+
+SELECT * FROM video;
+
+SELECT * FROM registro_quiz;

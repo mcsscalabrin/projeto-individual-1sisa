@@ -115,14 +115,13 @@ function carregarVideos() {
                 console.log("Dados recebidos: ", JSON.stringify(resposta));
 
                 var videosContainer = document.getElementById("videos-container");
+                var semVideos = document.getElementById("sem-videos");
+
                 videosContainer.innerHTML = "";
 
-                var semVideos = document.createElement("div");
-                semVideos.id = "sem-videos";
-                semVideos.className = "sem-videos";
-                semVideos.innerHTML = "<p>Nenhum vídeo compartilhado ainda. Seja o primeiro a compartilhar!</p>";
-
                 if (resposta.length > 0) {
+                    semVideos.style.display = "none";
+
                     for (let i = 0; i < resposta.length; i++) {
                         var video = resposta[i];
 
@@ -156,18 +155,17 @@ function carregarVideos() {
                         videosContainer.appendChild(videoCard);
                     }
                 } else {
+                    semVideos.style.display = "block";
                     videosContainer.appendChild(semVideos);
                 }
             });
         } else if (resposta.status == 204) {
             var videosContainer = document.getElementById("videos-container");
+            var semVideos = document.getElementById("sem-videos");
+
             videosContainer.innerHTML = "";
 
-            var semVideos = document.createElement("div");
-            semVideos.id = "sem-videos";
-            semVideos.className = "sem-videos";
-            semVideos.innerHTML = "<p>Nenhum vídeo compartilhado ainda. Seja o primeiro a compartilhar!</p>";
-
+            semVideos.style.display = "block";
             videosContainer.appendChild(semVideos);
         } else {
             console.error('Erro na API:', resposta.status);

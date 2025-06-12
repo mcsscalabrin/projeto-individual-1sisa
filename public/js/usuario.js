@@ -3,7 +3,24 @@ function sair() {
     window.location = "login.html";
 }
 
+function atualizarInformacoesUsuario() {
+    var nomeUsuario = sessionStorage.NOME_USUARIO;
+    var emailUsuario = sessionStorage.EMAIL_USUARIO;
+    var categoriaUsuario = sessionStorage.CATEGORIA_USUARIO;
+
+    if (nomeUsuario) {
+        document.getElementById('spanNomeUsuario').textContent = nomeUsuario;
+    }
+    if (emailUsuario) {
+        document.getElementById('spanEmailUsuario').textContent = emailUsuario;
+    }
+    if (categoriaUsuario) {
+        document.getElementById('spanCategoriaUsuario').textContent = categoriaUsuario;
+    }
+}
+
 function carregarDadosDashboard() {
+    atualizarInformacoesUsuario();
     var idUsuario = sessionStorage.ID_USUARIO;
     if (!idUsuario) {
         limparDashboard();

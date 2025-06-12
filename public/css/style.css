@@ -971,3 +971,114 @@ input {
 #quizChart {
     max-height: 100%;
 }
+
+.autor {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.sobre-mim {
+    font-size: 18px;
+    max-width: 920px;
+    color: #fff;
+    text-align: justify;
+    font-family: 'Raleway', sans-serif;
+    line-height: 1.8;
+    padding: 8px 15px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(38, 70, 83, 0.09);
+}
+
+.card-autor {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.autor-bonito {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+#imgMatheus {
+    width: 920px;
+    height: fit-content;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 4px solid var(--cor-primaria);
+    box-shadow: 0 4px 16px rgba(38, 70, 83, 0.2);
+    background: #fff;
+    margin-top: 10px;
+}
+
+.conquistas-section {
+    width: 100%;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.conquistas-titulo {
+    font-family: "Boldonse", system-ui;
+    font-size: 22px;
+    color: var(--cor-primaria);
+    margin-bottom: 18px;
+    letter-spacing: 1px;
+}
+
+.conquistas-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    justify-content: center;
+    width: 100%;
+}
+
+.conquista-card {
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 4px 16px rgba(38, 70, 83, 0.2);
+    border: 2px solid var(--cor-primaria);
+    max-width: 260px;
+    min-width: 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 18px 14px 14px 14px;
+    transition: transform 0.2s;
+}
+
+.conquista-card:hover {
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 0 8px 24px rgba(38, 70, 83, 0.2);
+}
+
+.conquista-img {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 10px;
+    margin-bottom: 12px;
+    object-fit: cover;
+    aspect-ratio: 4/3;
+    border: 2px solid var(--cor-secundaria);
+}
+
+.conquista-legenda {
+    color: var(--cor-secundaria);
+    font-size: 1em;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    margin-top: 4px;
+}
+
+.autor-link {
+    color: var(--cor-primaria);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
